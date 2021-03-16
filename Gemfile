@@ -25,12 +25,16 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
+gem 'block_editor' # Ruby on Rails Block Editor
+# gem 'block_editor', path: '../block_editor'
+# gem 'block_editor', git: 'git://github.com/yamasolutions/block_editor.git', ref: 'af6a982af640f263409be9d4a43bfdb62854bf6a'
+# gem 'block_editor', git: 'git://github.com/yamasolutions/block_editor.git', branch: 'master'
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-rails'
 end
 
 group :development do
