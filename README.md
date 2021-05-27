@@ -57,4 +57,11 @@ Updated trusted post parameters and specifically set the listable within the Pos
   <%= stylesheet_pack_tag 'block_editor/application', 'data-turbolinks-track': 'reload', webpacker: 'BlockEditor' %>
 ```
 
+* Install Bootstrap. Note this is only required if you want to use the base styles that BlockEditor provides as they depend on Bootstrap
+```
+yarn add bootstrap
+```
+
+* Add SCSS imports for Bootstrap & base block editor styles. [Check them out here](https://github.com/yamasolutions/block-editor-sample/blob/master/app/assets/stylesheets/application.scss)
+
 * Win

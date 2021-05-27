@@ -1,27 +1,27 @@
-<p id="notice"><%= notice %></p>
+<div class="container mt-4">
 
-<h1>Posts</h1>
+  <p>This is a simple demonstration application to showcase <a href="https://github.com/yamasolutions/block-editor" class="">Block Editor</a>, a Ruby on Rails gem for creating rich content built using the <a href="https://github.com/WordPress/gutenberg">Wordpress Gutenberg</a> packages.</p>
+  <p><a href="/posts/new" class="btn btn-primary">Test it yourself</a></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @posts.each do |post| %>
+  <hr />
+  <h2>User generated content</h2>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= post.title %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Title</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= link_to 'Show', post %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

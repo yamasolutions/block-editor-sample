@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_12_032642) do
+ActiveRecord::Schema.define(version: 2021_05_27_230356) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
+  create_table "block_editor_block_list_connections", force: :cascade do |t|
+    t.bigint "parent_id"
+    t.bigint "child_id"
+    t.index ["child_id"], name: "index_block_editor_block_list_connections_on_child_id"
+    t.index ["parent_id"], name: "index_block_editor_block_list_connections_on_parent_id"
+  end
 
   create_table "block_editor_block_lists", force: :cascade do |t|
     t.string "name"
