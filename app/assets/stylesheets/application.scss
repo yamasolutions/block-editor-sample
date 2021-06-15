@@ -1,8 +1,5 @@
-// Bootstrap functions (used within variables)
-@import "bootstrap/scss/functions";
-
-// Import custom application variables
-// @import "<your-app>/variables";
+@import "bootstrap/scss/functions"; // Bootstrap functions (used within variables)
+@import "block_editor/host_app/variables"; // Custom Bootstrap variables
 
 // Bootstrap default variables, mixins & utilities
 @import "bootstrap/scss/variables";
@@ -40,21 +37,16 @@
 @import "bootstrap/scss/carousel";
 @import "bootstrap/scss/spinners";
 @import "bootstrap/scss/offcanvas";
-@import "bootstrap/scss/helpers"; // Helpers
-@import "bootstrap/scss/utilities/api"; // Utilities
 
-// Block editor blocks & overrides
+// Block editor default styles, utilties, custom blocks & overrides
 @import "block_editor/blocks/frontend";
+@import "block_editor/host_app/blocks/frontend";
 @import "block_editor/utilities";
 
-// // Custom layout, components & blocks + minor extensions
-// @import "<your-app>/layout/*";
-// @import "<your-app>/components/*";
-// @import "<your-app>/blocks/frontend";
+@import "bootstrap/scss/helpers"; // Bootstrap helpers
+@import "bootstrap/scss/utilities/api"; // Utilities (last so that they can be overridden)
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-

@@ -13,9 +13,14 @@
 
   <div class="field">
     <%= form.label :title %>
+
     <%= form.text_field :title %>
     <p class=form-text>A title isn't required but if you're wanting to find the content on the homepage it's useful</p>
   </div>
+  <div class="alert alert-warning">
+    <p>Image uploading is disabled - instead a random image will be selected from <a href="https://unsplash.com/" target="_blank">Unsplash</a></p>
+  </div>
+
 
   <%= form.fields_for :active_block_list do |block_list| %>
     <%= BlockEditor::Instance.render(block_list) %>
