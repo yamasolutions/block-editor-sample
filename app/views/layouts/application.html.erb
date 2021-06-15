@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlockEditorSmaple</title>
+    <title>Block Editor - Ruby on Rails - Sample</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="turbolinks-visit-control" content="reload">
     <%= csrf_meta_tags %>
@@ -14,6 +14,23 @@
   </head>
 
   <body>
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <h1><a href="/" class="text-white navbar-brand">Ruby on Rails Block Editor</a></h1>
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          </ul>
+
+          <div class="text-end">
+            <% if action_name == "show" %>
+              <a href="<%= edit_post_url(@post) %>" class="btn btn-outline-warning">Edit content</a>
+            <% end %>
+            <a href="/posts/new" class="btn btn-outline-light">Test it yourself</a>
+            <a href="https://github.com/yamasolutions/block-editor" class="btn btn-primary" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
